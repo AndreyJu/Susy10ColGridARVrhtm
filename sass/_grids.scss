@@ -2,8 +2,94 @@
 // ============
 
 @import "susy";
+@import "typography";
 
 $susy: (
-  columns: 12,
-  gutters: 1/4,
+  columns: 10,
+  gutters: 1/6,
+    container: 60em,
+    math: fluid,
+    output: float,
+    gutter-position: outside,
+
+    debug: (
+      image: show,
+      color: rgba(#666, .2),
+      output: background,
+      toggle: top right,
+  ) 
 );
+ 
+/* GRID RULES */
+
+#main {
+  @include container();
+  // Compass Vertical Rhythm
+  @include margin-trailer(3);
+  @include margin-leader(3);
+  @media screen and (max-width: 768px) {
+    margin: 0;
+  }
+}
+
+#masthead { 
+  @include span(7);
+  background: rgba(red, .5);
+  @media screen and (max-width: 768px) {
+    @include span(10);
+    margin-bottom: 0;
+  }
+}
+
+#content {
+  @include span(7);
+  /*@include padding-trailer(2);
+  @include padding-leader(2);*/ 
+  background: rgba(darkorange, .5);
+  @media screen and (max-width: 768px) {
+    @include span(10);
+  }
+}
+#sidebar {
+  @include span(3 last);
+  background: rgba(hotpink, .5);
+  @media screen and (max-width: 768px) {
+    @include span(10);
+  }
+}
+
+#advertisement {
+  @include span(9);
+  @include push(0.5);
+  background: rgba(green, .7);
+  @media screen and (max-width: 768px) {
+    @include span(10);
+  }
+}
+
+#pre-footer {
+  @include span(10);
+  background: rgba(brown, .5);
+}
+
+.pre-footer-column {
+  @include span(3.3);
+  &:last-child {
+    @include span(3.3 last);
+    @media screen and (max-width: 768px) {
+      @include span(10);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    @include span(10);
+  }
+}
+
+#colophon {
+  @include span(10);
+  @include padding-trailer(1);
+  @include padding-leader(1);
+  background: rgba(black, .5);
+}
+
+
