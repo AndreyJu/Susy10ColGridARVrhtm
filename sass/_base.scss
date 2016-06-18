@@ -1,0 +1,36 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black
+ ;
+  color: white;
+}
+#masthead {
+  margin-bottom: 10px;
+}
+
+.entry,
+.widget, {
+  margin-left: 5%;
+  margin-right: 5%;
+  & p { text-align: justify; }
+}
+
+#advertisement {margin: 10px 0;}
+
+#pre-footer-column {
+	background-color: rgba(#666, .5);
+}
+
+#sidebar,
+#content,
+#advertisement {
+	border-style: inset;
+	border: 2px solid white;
+	border-radius: 0px;
+}
+
+.pre-footer-column {
+  
+}
